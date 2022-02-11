@@ -1,11 +1,10 @@
 # Importing required libraries
-import matplotlib.pyplot as plt
-import seaborn as sns
-sns.set_style('whitegrid')
+# import seaborn as sns
+# sns.set_style('whitegrid')
 import streamlit as st
 import numpy as np
 import pandas as pd
-import altair as alt
+# import altair as alt
 from pvlib import solarposition, location
 from sklearn.linear_model import LinearRegression
 import mysql.connector
