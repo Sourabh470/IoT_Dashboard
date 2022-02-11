@@ -436,8 +436,7 @@ if authentication_status:
                 
             elif (end_date - start_date) >= timedelta(days=31) and option == 'Current Voltage Time Series':
                 dff = final_data[['datetime','Current(A)', 'Voltage(V)']].copy()
-                
-                dff = dff.between_time('05:00', '08:00')
+           
                 fig = make_subplots(specs=[[{"secondary_y": True}]])
                 fig.add_trace(go.Scatter(x=dff["datetime"],y=dff["Current(A)"], mode ="lines", name="Current"),secondary_y=False,)
                 fig.add_trace(go.Scatter(x=dff["datetime"],y=dff["Voltage(V)"], mode ="lines", name="Voltage"),secondary_y=True,)
@@ -463,7 +462,7 @@ if authentication_status:
                 
             elif (end_date - start_date) == timedelta(days=1) and option == 'Current Voltage Time Series':
                 dff = final_data[['datetime','Current(A)', 'Voltage(V)']].copy() 
-                dff = dff.between_time('05:00', '08:00')
+                
                 fig = make_subplots(specs=[[{"secondary_y": True}]])
                 fig.add_trace(go.Scatter(x=dff["datetime"],y=dff["Current(A)"], mode ="lines", name="Current"),secondary_y=False,)
                 fig.add_trace(go.Scatter(x=dff["datetime"],y=dff["Voltage(V)"], mode ="lines", name="Voltage"),secondary_y=True,)
