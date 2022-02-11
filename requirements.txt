@@ -1,0 +1,12 @@
+numpy
+pandas
+streamlit
+base64tool
+mute-tf-warnings
+mysql.connector
+datetime
+PIL-Tools
+pvlib
+sklearn
+streamlit-authenticator
+plotly
