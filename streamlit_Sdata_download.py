@@ -566,6 +566,7 @@ if authentication_status:
                 fig.add_trace(go.Scatter(x=v_filter["Tmod"],y=v_filter["V_coef"],name="Filtered Values", mode ="markers", marker={'size': 6}))
                 fig.update_layout(title= "Variation of Voltage with Temperature<br><sup>Temperature coefficient of Voltage = " + str(np.round(v_coef.tolist()[0],2)) + " % per °C</sup>", title_x=0.5,title_y=0.95)
                 fig.update_yaxes(range = [50,100], title_text= "Normalized Vmpp (V)")
+                fig.update_xaxes(range = [10,70], title_text= "Module Temperature")
                 fig['layout']['title']['font'] = dict(size=20)
                 fig.update_layout(yaxis = dict(tickfont = dict(size=14), titlefont = dict(size = 16)))
                 fig.update_layout(xaxis = dict(tickfont = dict(size=14), titlefont = dict(size = 16)))
